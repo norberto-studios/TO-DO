@@ -8,7 +8,6 @@ import Footer from "$lib/Footer.svelte";
 </script>
 
 <div class="flex flex-1 flex-col h-lvh justify-between p-6">
-
   <div class="">
     <Header title="TO-DO"/>
     <SubHeading/>
@@ -16,7 +15,6 @@ import Footer from "$lib/Footer.svelte";
     <TodoFilters/>
     <TodosList/>
   </div>
-
   <Footer/>
 </div>
 

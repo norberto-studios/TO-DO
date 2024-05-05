@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Geliat ExtraLight';
+    font-style: normal;
+    font-weight: 400;
+    src: url('$lib/assets/fonts/Geliat/GeliatExtralight-6YLRq.otf') format('otf');
+}

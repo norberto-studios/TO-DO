@@ -3,8 +3,11 @@
         id: number
         text: string
         done: boolean
+        createdAt: string
+        editedAt: string
     }
-    type Filters = 'all' | 'active' | 'completed'
+    export type Filters = 'all' | 'active' | 'completed'
+
 
     let todos = $state<Todo[]>([])
     let filter = $state<Filters>('all')
@@ -23,7 +26,8 @@
     export function addTodo(text: string) {
         const id = generateRandomId()
         const done = false
-        todos = [...todos, { id, text, done }]
+        const created = new Date().toISOString()
+        todos = [...todos, { id, text, done, createdAt: created, editedAt: created }]
     }
 
     function generateRandomId() {
@@ -36,22 +40,27 @@
         const inputEl = event.target as HTMLInputElement
         const index = +inputEl.dataset.index!
         todos[index].text = inputEl.value
+        todos[index].editedAt = new Date().toISOString()
     }
 
-    export function toggleTodo(event: Event) {
-        const inputEl = event.target as HTMLInputElement
-        const index = +inputEl.dataset.index!
-        todos[index].done = !todos[index].done
+    export function toggleTodo(id: number) {
+        todos.filter(todo => {
+            if (todo.id === id){
+              return todo.done = !todo.done
+            }
+        } )
     }
 
-    export const deleteTodo = (event: Event) => {
-        const btnEl = event.target as HTMLButtonElement
-        const index = +btnEl.dataset.index!
-        setTodos(getTodos().filter(todo => todo.id !== index));
+    export const deleteTodo = (id: number) => {
+        setTodos(todos.filter(todo => todo.id !== id));
     }
 
     export function setFilter(newFilter: Filters) {
         filter = newFilter
+    }
+
+    export function getFilter(){
+        return filter
     }
 
     export function filterTodos() {

@@ -2,7 +2,7 @@
     import '../app.css'
 </script>
 <svelte:head>
-  <title>Svelte 5 Todo App</title>
+  <title>NSTUDIOS TO-DO App</title>
 </svelte:head>
 
 <main>
@@ -16,10 +16,7 @@
     }
 
     :global(body) {
-        display: grid;
-        /*margin: 24px;*/
-        /*place-content: center;*/
-        font-family: 'Manrope Variable', sans-serif;
+        font-family: 'Geliat ExtraLight','Manrope Variable', sans-serif;
         color: hsl(220 10% 98%);
         background-color: hsl(243 19% 22%);
     }

@@ -1,7 +1,7 @@
 # Info
-A Todo application using Svelte and SvelteKit With Vite. \
-Instead of using `npm` will be using `Bun 1.1.4`
-The application uses Typescript as well
+A Todo application using `Svelte 5` beta and `SvelteKit 2.5` With Vite. \
+Instead of using `npm` will be using `Bun 1.1.4` \
+The application uses `Typescript` and `Tailwind beta-4.0.0-alpha`
 
 ## Developing
 
@@ -24,4 +24,9 @@ bun run build
 
 You can preview the production build with `bun run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+> The Application is fully functional with Local Storage included and 
+> a Drag and drop for the todos
+
+## App Preview
+### Responsive design
+![img.png](img.png)
