@@ -1,6 +1,6 @@
 import type {TodoTypes} from "$lib/utils/Todo.svelte";
 
-type FiltersTypes = 'all' | 'active' | 'completed'
+export type FiltersTypes = 'all' | 'active' | 'completed'
 
 let todos = $state<TodoTypes[]>([])
 let filter = $state<FiltersTypes>('all')
