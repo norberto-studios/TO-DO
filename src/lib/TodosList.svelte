@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {deleteTodo, editTodo, getFilteredTodos, getTodos, setTodos, toggleTodo} from "$lib/utils/Utils.svelte";
+    import {deleteTodo, editTodo, getFilteredTodos, getTodos, setTodos, toggleTodo} from "$lib/utils/Utils.svelte.js";
     import {SortableList} from '$lib/utils';
     import x from '$lib/assets/svgs/x-mark.svg'
     import moveDots from "$lib/assets/svgs/ellipsis-horizontal.svg";
@@ -33,7 +33,7 @@
       <div class="flex flex-1">
         <input class="w-full h-full p-2 flex flex-wrap mx-2 border-0 text-lg"
                oninput={editTodo}
-               data-index={i} value={todo.text} type="text"/>
+               data-index={i} bind:value={todo.text} type="text"/>
       </div>
       <div class="flex">
         <div class="flex items-center ">

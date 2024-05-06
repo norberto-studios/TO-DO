@@ -1,5 +1,5 @@
 <script lang="ts">
-  import FilterButton from "$lib/components/FilterButton.svelte";
+  import FilterButton from "$lib/components/Btn/FilterButton.svelte";
 </script>
 
 <div class="flex gap-4 mb-6">

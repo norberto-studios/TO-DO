@@ -7,15 +7,12 @@ import SubHeading from "$lib/SubHeading.svelte";
 import Footer from "$lib/Footer.svelte";
 </script>
 
-<div class="flex flex-1 flex-col h-lvh justify-between p-6">
-  <div class="">
+<div>
     <Header title="TO-DO"/>
     <SubHeading/>
     <AddTodoBar/>
     <TodoFilters/>
     <TodosList/>
-  </div>
-  <Footer/>
 </div>
 
 

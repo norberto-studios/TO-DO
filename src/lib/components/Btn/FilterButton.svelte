@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {setFilter, getFilter, type Filters} from "$lib/utils/Utils.svelte";
+    import {setFilter, getFilter, type Filters} from "$lib/utils/Utils.svelte.js";
     let filter = $state('all')
     let { name }: {name: Filters} = $props()
 

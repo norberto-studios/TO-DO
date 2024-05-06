@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {addTodo} from "$lib/utils/Utils.svelte";
+    import {addTodo} from "$lib/utils/Utils.svelte.js";
 
     let value: HTMLInputElement;
 
