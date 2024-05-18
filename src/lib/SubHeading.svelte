@@ -1,5 +1,5 @@
 <script lang="ts">
- import { remaining }  from "$lib/utils/Utils.svelte";
+ import { remaining }  from "$lib/utils/Utils.svelte.js";
 </script>
 
 <div class="flex justify-between text-lg mb-4">
